@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>John Doe | Freelance Videographer</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="hero">
+	<div class="heromenu"><h2><a href="../../">About</a><a href="../">Portfolio</a><a href="../../contact.html">Contact</a></h2></div>
+	<div class="herotext">
+		<h1>John Doe</h1>
+		<p>Freelance Videographer</p>
+	</div>
+</div>
+<article>
+	<h1 id="name">Error</h1>
+	<p id="text">Sorry! The item ID either is not present or is not correct. If you clicked on a link from this website, please contact the webmaster <a href="mailto:griffincodes@pm.me?subject=Broken%20Link%20on%20Videography%20Portfolio%20Demo&body=There%20is%20a%20broken%20link%20on%20the%20%22View%20Work%22%20page.%20(Email%20sender%3A%20please%20do%20NOT%20modify%20this%20text.%20Thanks!%20-Griffin%20%5Bwebmaster%5D)">here</a>.</p>
+</article>
+<footer><a href="../../">About</a> &mid; <a href="../">Portfolio</a> &mid; <a href="../../contact.html">Contact</a><br>Portfolio Demo by <a href="https://github.com/griffincodes" target="_blank" title="@griffincodes on GitHub">Griffin Larson</a>. Licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank">Creative Commons Attribution-NonCommerical 4.0 International</a> license.</footer>
+<script type="text/javascript">
+	var $_GET = {};
+	if(document.location.toString().indexOf('?') !== -1) {
+		var query = document.location
+            		.toString()
+                   	.replace(/^.*?\?/, '')
+                   	.replace(/#.*$/, '')
+                   	.split('&');
+
+    	for(var i=0, l=query.length; i<l; i++) {
+       		var aux = decodeURIComponent(query[i]).split('=');
+       		$_GET[aux[0]] = aux[1];
+    	}
+	}
+	var itemId = $_GET['item'];
+	if (itemId <= 6) {
+		document.getElementById("name").innerHTML = "Work " + itemId;
+		document.getElementById("text").innerHTML = "This is the demo content of the demo project &quot;Work " + itemId + ".&quot;";
+	} else {
+		document.getElementById("name").innerHTML = "Error";
+		document.getElementById("text").innerHTML = "Sorry! The item ID either is not present or is not correct. If you clicked on a link from this website, please contact the webmaster <a href='mailto:griffincodes@pm.me?subject=Broken%20Link%20on%20Videography%20Portfolio%20Demo&body=There%20is%20a%20broken%20link%20on%20the%20%22View%20Work%22%20page.%20(Email%20sender%3A%20please%20do%20NOT%20modify%20this%20text.%20Thanks!%20-Griffin%20%5Bwebmaster%5D)'>here</a>.";
+	}
+</script>
+</body>
+</html>
